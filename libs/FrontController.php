@@ -15,8 +15,8 @@ class FrontController
 
         require 'config.inc.php'; //Archivo con configuraciones.
         require 'settings.inc.php';
-        if (file_exists(__DIR__ . 'vendor/autoload.php')) {
-            require __DIR__ . '/vendor/autoload.php';
+        if (file_exists(ROOT_DIR . '/vendor/autoload.php')) {
+            require ROOT_DIR . '/vendor/autoload.php';
         }
 
         //Formamos el nombre del Controlador o en su defecto, tomamos que es el IndexController

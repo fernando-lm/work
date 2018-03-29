@@ -13,8 +13,8 @@ namespace Libs;
 class View
 {
     private $config;
-    private $include_js     = "";
-    private $include_css    = "";
+    private $include_js  = "";
+    private $include_css = "";
 
     public function __construct()
     {
@@ -111,5 +111,33 @@ class View
     {
         header("Cache-Control: no-cache, must-revalidate");
         header("Expires: Sat, 26 Jul 1997 05:00:00 GMT");
+    }
+
+    public function __t($str)
+    {
+        $assetsPath = $this->config->get('assetsPath');
+        $lang = $this->getLang();
+
+        if ($lang !== null) {
+            if (file_exists($assetsPath . 'lang/' . $lang . '.php')) {
+                include($assetsPath . 'lang/' . $lang . '.php');
+                if (isset($lang[$str])) {
+                    $str = $lang[$str];
+                }
+            }
+        }
+
+        return $str;
+    }
+
+    private function getLang()
+    {
+        $lang = DEFAULT_LANG;
+
+        if (isset($_SESSION['lang'])) {
+            $lang = $_SESSION['lang'];
+        }
+
+        return $lang;
     }
 }

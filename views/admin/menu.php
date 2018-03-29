@@ -204,6 +204,19 @@
         <!-- /.dropdown -->
         <li class="dropdown">
             <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+                <i class="flag-icon flag-icon-<?=$flag?>"></i> <i class="fa fa-caret-down"></i>
+            </a>
+            <ul class="dropdown-menu dropdown-user">
+                <li><a href="index.php?accion=lang&lang=es&redirect=<?=$_SERVER['REQUEST_URI']?>"><i class="flag-icon flag-icon-es"></i> Español</a>
+                </li>
+                <li><a href="index.php?accion=lang&lang=en&redirect=<?=$_SERVER['REQUEST_URI']?>"><i class="flag-icon flag-icon-gb"></i> English</a>
+                </li>
+            </ul>
+            <!-- /.dropdown-user -->
+        </li>
+        <!-- /.dropdown -->
+        <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                 <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
             </a>
             <ul class="dropdown-menu dropdown-user">
@@ -234,6 +247,9 @@
                         </span>
                     </div>
                     <!-- /input-group -->
+                </li>
+                <li>
+                    <a href="index.php?accion=users"><i class="fa fa-dashboard fa-fw"></i> <?=$this->__t('Usuarios')?></a>
                 </li>
                 <li>
                     <a href="index.html"><i class="fa fa-dashboard fa-fw"></i> Dashboard</a>

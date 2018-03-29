@@ -25,3 +25,5 @@ $config->set('libsFolder',        ROOT_DIR . 'libs/');
 $config->set('MYSQL_DSN', 'mysql:host=localhost;dbname=work');
 $config->set('MYSQL_USER', 'root');
 $config->set('MYSQL_PASS', '');
+
+define('DEFAULT_LANG', "es");

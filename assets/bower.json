@@ -15,6 +15,8 @@
     "jquery": "^3.1.0",
     "bootstrap": "^3.3.7",
     "fontawesome": "^4.6.3",
-    "metisMenu": "metismenu#^2.7.4"
+    "metisMenu": "metismenu#^2.7.4",
+    "jquery-validation": "^1.17.0",
+    "flag-icon-css": "^3.1.0"
   }
 }
